@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .navbar1{
+            background-color: rgb(239, 75, 75);
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo{
+            color: white;
+            font-size: 30px;
+            margin-left: 20px;
+        }
+        .shop{
+            color: white;
+            font-size: 20px;
+            margin-right: 20px;
+        }
+        #cart{
+            font-size: 40px;
+        }
+        .navbar2{
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .navbar2 ul li{
+            display: inline-block;
+            margin: 0px 50px;
+        }
+        .navbar2 ul li a{
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+        .img{
+            background-image: url("scenery.jpg");
+            width: 100%;
+            height: 400px;
+        }
+        .box{
+            width: 100%;
+            height: 375px;
+            display: flex;
+        }
+        .feature{
+            width: 25%;
+            height: 375px;
+            background-color: rgb(239, 75, 75);
+            font-size: 60px;
+            color: white;
+            font-family:'Arial';
+            line-height: 90px;
+            padding-left: 20px;
+            font-weight: bold;
+        }
+        .product{
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-around;
+            width: 75%;
+            height: 375px;
+            background-color: rgba(128, 128, 128, 0.177);
+        }
+        .box1{
+            width: 23%;
+            height: 350px;
+            background-color: white;
+            display: flex;
+            flex-direction: column; 
+        }
+     
+        *{ margin: 0; }
+        .font{ margin: 8px 10px;}
+        h2{
+            text-align: center;
+            font-size: 30px;
+        }
+        h4{
+            font-size: 20px;
+        }
+       #img1{
+        align-self: center;
+       }
+       .h1{
+        text-align: center;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        color: #f54e4e;
+       }
+       .collect{
+        width: 100%;
+        height: 400px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 8px;
+        grid-template-areas: 
+        "bx1 bx2 bx3"
+        "bx1 bx4 bx3";
+       }
+       .cbox1{background-image: url("man\ wearing\ suit.webp"); }
+       .cbox2{background-image: url("shoes.jpg"); }
+       .cbox3{background-image: url("man\ suit\ 2.jpg");}
+       .cbox4{background-image: url("both\ siiting.jpg");}
+       #btn{
+        font-size: 20px;
+        background-color: transparent;
+        color: rgb(56, 37, 37);
+        border: 2px solid rgb(57, 35, 35);
+       }
+       #cbox{
+         display: flex; flex-direction: column; align-items: center; justify-content: center;font-size: 28px; color: rgb(43, 24, 24); background-size: cover; border: 1px solid grey;
+       }
+       .pstyle{
+        background-image: url("fence\ girl.webp"); width: 100%; height: 650px; background-size: cover; margin-top: 10px; font-size: 32px; color: white; text-align: center;
+       }
+       #img{
+        width: 24%; height: 400px;
+       }
+       #sty{
+        margin: 20px 0px;
+       }
+       #arrow{
+        font-size: 50px;
+       }
+       .model{
+        text-align: center; color: #f54e4e; font-size: 35px;
+       }
+       #models{
+        width: 100%; height: 650px; display: flex; flex-direction: row; justify-content: space-around;
+       }
+       #MD{align-self: center;}
+       #top{color: #f54e4e; font-size: 50px; align-items: baseline;}
+       .photo1{width: 100%; height: 350px; display: flex; justify-content: space-around;}
+       #mod{width: 28%; height: 300px; background-size: cover;}
+       .logo1{width: 100%; height: 300px; background-color: #f54e4e; align-items: center;}
+       #logor{align-self: center; color: white; text-align: center;}
+       #parar{color: white; text-align: center; font-size: 18px; padding:20px ;}
+       .logop{
+        display: flex; flex-direction: row; justify-content: space-around;  }
+       .links{color: white; display: flex; flex-direction: column; line-height: 25px;}
+    </style>
+</head>
+<body>
+    <nav class="navbar1">
+        <div class="logo">logo</div>
+        <div class="shop">Shopping
+            <i class="fa-solid fa-cart-shopping" id="cart"></i>
+        </div>
+    </nav>
+    <nav class="navbar2">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="img"></div>
+    <div class="box">
+    <div class="feature">
+      OUR <br> FEATURES <br> PRODUCTS <br>
+      <i class="fa-solid fa-circle-left"></i><i class="fa-solid fa-circle-right"></i>
+    </div>
+    <div class="product">
+        <div class="box1">
+            <img src="download-Photoroom.png" alt="" width="90%" height="200px" id="img1">
+            <h2>Five Petal Cap-<br>Black</h2>
+            <h4 class="font">Rs:-1001 Rs:-400</h4>
+            <p class="font">Save:-60%</p>
+        </div>
+        <div class="box1">
+            <img src="shoes.jpg" alt="" width="90%" height="200px" id="img1">
+            <h2>Nike Og Breeze <br> Running Shoes</h2>
+            <h4 class="font">Rs:-1001 Rs:-400</h4>
+            <p class="font">Save:-60%</p>
+        </div>
+        <div class="box1">
+            <img src="istockphoto-1359180038-612x612.jpg" alt="" width="90%" height="200px" id="img1">
+             <h2>Five Petal Cap- <br>Black</h2>
+            <h4 class="font">Rs:-1001 Rs:-400</h4>
+            <p class="font">Save:-60%</p>
+        </div>
+    </div>
+    </div>
+    <h1 class="h1">New Fashion Collection</h1>
+    <div class="collect">
+        <div class="cbox1" style="grid-area: bx1;" id="cbox">
+             <h1>Mens SS 18 <br> Collection</h1><br>
+            <p>Performance with <br>comfort and elegance</p><br>
+            <input type="button" id="btn" value="Explore Collection">
+        </div>
+        <div class="cbox2" style="grid-area: bx2;" id="cbox">
+           <h1>Mens SS 18 <br> Shoes Collection</h1><br>
+           <input type="button" id="btn" value="Explore Collection">
+        </div>
+        <div class="cbox3" style="grid-area: bx3;" id="cbox">
+            <h1>Mens SS 18 <br>Collection</h1>
+            <p>Performance with <br> comfort and elegance</P><br>
+            <input type="button" id="btn" value="Explore Collection">
+        </div>
+        <div class="cbox4" style="grid-area: bx4;" id="cbox">
+            <h1>Mens SS 18 <br> Collection</h1><br>
+            <input type="button" id="btn" value="Explore Collection">
+        </div>
+    </div>
+    <div class="pstyle">
+        <h1 id="sty">Your Perfect Style</h1>
+        <img src="leather jacketmen.jpg" alt="" id="img">
+        <img src="tshirt man.webp" alt="" id="img">
+        <img src="hat girl.jpeg" alt="" id="img">
+        <img src="leather jacket girl.jpg" alt="" id="img">
+        <i class="fa-solid fa-circle-left" id="arrow"></i>&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-right" id="arrow"></i>
+    </div>
+    <div class="model"><h1>Our Models</h1></div>
+    <div id="models">
+        <div class="model1" id="MD"><img src="man suit 2.jpg" alt="" width="100%" height="350px"><h2>John Matrix</h2>
+        <P>Lorem ipsum dolor sit amet consectetur, <br>adipisicing elit. Eius pariatur ullam fuga ad <br> culpa, nam facere aut necessitatibus velit <br>deserunt blanditiis labore hic, fugiat <br>praesentium voluptate voluptates <br>doloribus nisi. Perspiciatis!</P></div>
+        <div class="model2"><img src="hat girl.jpeg" alt=""  width="100%" height="350px"><h2>Anna Brown</h2><p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Aliquam tempore eos harum <br>eius. Necessitatibus, expedita odit quia <br>ipsam commodi sapiente rerum, ratione <br> quae nemo deleniti hic. Quia a <br>esse consectetur.</p> <br><br><br><h1 id="top">Our Top Products</h1></div>
+        <div class="model3" id="MD"><img src="leather jacketmen.jpg" alt="" width="100%" height="350px"><h2>Neil Narrina</h2><p>Lorem, ipsum dolor sit amet consectetur <br> adipisicing elit. Non repudiandae modi <br>mollitia sunt dolores laboriosam placeat,<br> exercitationem vel repellendus nam possimus <br>earum? Error omnis maiores placeat <br>repudiandae maxime labore est.</p></div>
+    </div>
+    <div class="photo1">
+        <img src="male model 1.jpg" alt="" id="mod">
+        <img src="male model 2.webp" alt="" id="mod">
+        <img src="male model 3.jpg" alt="" id="mod">
+    </div>
+    <div class="photo1">
+        <img src="female model 1.webp" alt="" id="mod">
+        <img src="female model 2.jpg" alt="" id="mod">
+        <img src="female model 3.jpg" alt="" id="mod">
+    </div>
+    <div class="logo1">
+        <h1 id="logor" >Logo</h1>
+        <p id="parar"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati similique ipsam est cupiditate iste porro qui ut quos odio. Quod enim perferendis, quis ipsa, voluptas aut possimus animi aperiam illo quo, consequatur a dolorem magnam dolore labore rem itaque ut.</p> <br>
+        <div class="logop">
+            <div class="links" >
+                <h4>Quick links</h4>
+                Categories <br>
+                About Theme <br>
+                Our Blog <br>
+                Trendy <br>
+                shop <br>
+            </div>
+            <div class="links">
+                <h4>Shopping Deals</h4>
+            Fashion <br>
+            Products <br>
+            Deals <br>
+            Categories <br>
+            Ladies bag <br>
+        </div>
+            <div class="links">
+                <h4>Customer Services</h4>
+            Frequently Asked Questions <br>
+            Refund/return policy <br>
+            contact suppourt <br>
+            Report abuse <br>
+            ladies bag <br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
